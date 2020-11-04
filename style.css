@@ -19,6 +19,7 @@ body {
   justify-content: center;
   text-align: center;
   position: relative;
+  overflow: hidden;
 }
 
 .clock{
@@ -136,8 +137,91 @@ body {
     box-shadow: 3px 3px 9px rgb(25, 94, 243), -3px -3px 9px rgb(245, 241, 241);
   }
   100% {
-    transform: scale(4) rotateY(1000deg);
+    transform: scale(3) rotateY(1000deg);
     opacity: 0;
     box-shadow: 3px 3px 9px rgb(243, 25, 98), -3px -3px 9px rgb(245, 241, 241);
+  }
+}
+
+  @media (max-width: 500px) 
+  {
+
+    .container{
+      overflow: hidden;
+    }
+    .hours,
+    .minutes,
+    .seconds,
+    .amorpm{
+    height: 3em;
+    width: 3em;
+    padding: 10px;
+    margin: 10px;
+    }
+
+  #hours,
+  #minutes,
+  #seconds,
+  #amorpm {
+    font-size: 1.5em;
+  }
+
+  .clock h1{
+    font-size: 1.5rem;
+  }
+
+  @keyframes square {
+    0% {
+      transform: scale(0) rotateY(0);
+      opacity: 1;
+      box-shadow: 3px 3px 9px rgb(25, 94, 243), -3px -3px 9px rgb(245, 241, 241);
+    }
+    100% {
+      transform: scale(1.5) rotateY(1000deg);
+      opacity: 0;
+    box-shadow: 3px 3px 9px rgb(243, 25, 98), -3px -3px 9px rgb(245, 241, 241);
+    }
+  }
+}
+
+@media (max-height: 500px)
+{
+
+  .container{
+    overflow: hidden;
+  }
+  .hours,
+  .minutes,
+  .seconds,
+  .amorpm{
+    height: 3em;
+    width: 3em;
+    padding: 10px;
+    margin: 10px;
+  }
+
+  #hours,
+  #minutes,
+  #seconds,
+  #amorpm {
+    font-size: 1.5em;
+  }
+
+  .clock h1{
+    font-size: 1.5rem;
+  }
+
+  @keyframes square {
+    0% {
+      transform: scale(0) rotateY(0);
+      opacity: 1;
+      box-shadow: 3px 3px 9px rgb(25, 94, 243), -3px -3px 9px rgb(245, 241, 241);
+    }
+    100% {
+      transform: scale(1.5) rotateY(1000deg);
+      opacity: 0;
+    box-shadow: 3px 3px 9px rgb(243, 25, 98), -3px -3px 9px rgb(245, 241, 241);
+
+    }
   }
 }
